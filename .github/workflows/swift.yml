@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          xcodebuild -scheme "actionTest"  -resultBundlePath TestResults -allowProvisioningUpdates
+          xcodebuild -scheme "actionTest"  -resultBundlePath TestResults
       - uses: tbartelmess/analyze-xcoderesults-action@0.1.0
         if: always()
         with: 
