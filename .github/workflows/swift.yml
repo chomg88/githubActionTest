@@ -10,8 +10,8 @@ jobs:
 
     env:
       # certificate 
-      ENCRYPTED_CERT_FILE_PATH: ${{ '.github/enterprise_cert.p12.gpg' }}
-      DECRYPTED_CERT_FILE_PATH: ${{ '.github/enterprise_cert.p12' }}
+      ENCRYPTED_CERT_FILE_PATH: ${{ '.github/dev_cntr_cert.p12.gpg' }}
+      DECRYPTED_CERT_FILE_PATH: ${{ '.github/dev_cntr_cert.p12' }}
       CERT_ENCRYPTION_KEY: ${{ secrets.ENTERPRISE_CERTS_ENCRYPTION_PWD }} # gpg로 파일 암호화할 때 사용한 암호
 
       # certification export key
