@@ -4,7 +4,7 @@
 target 'actionTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-	pod 'DevPlayIOS', :git => "https://chomg88@github.com/devsisters/devplay_ios.git"
+	pod 'DevPlayIOS', :path => '~/.cocoapods/repos/DevPlayIOS/'
   # Pods for actionTest
 
   target 'actionTestTests' do
