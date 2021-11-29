@@ -56,6 +56,15 @@ jobs:
             cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
           done
 
+      - name: Specs Repo
+        run: pod repo add DevPlayIOS https://${POD_GITHUB_API_TOKEN}@github.com/devsisters/devplay_ios.git
+        env:
+          POD_GITHUB_API_TOKEN: ${{ secrets.POD_GITHUB_API_TOKEN }}
+
+      - name: install pods
+        run: |
+          pod install --repo-update --clean-install
+
       - name: Run Tests
         run: |
           xcodebuild -scheme "actionTest"  -resultBundlePath TestResults
