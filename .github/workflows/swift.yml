@@ -63,7 +63,7 @@ jobs:
 
       - name: install pods
         run: |
-          pod install --repo-update --clean-install
+          pod install --repo-update --clean-install --project-directory=actionTest/
 
       - name: Run Tests
         run: |
